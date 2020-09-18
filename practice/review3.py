@@ -34,6 +34,7 @@ def checkInput(st):
 
 def main():
     word = getWord().upper()
+    print(word)
     wrongGuesses = [] #what they guess so far
     correctGusses = [] #whats write 
     numGuess = len(word)+2 #give them some more guesses 
@@ -57,9 +58,19 @@ def main():
         elif guess in wrongGuesses:
             print("You guess that alerady!")
             continue
+        elif len(guess)> 1:
+            if guess == word:
+                print("Well done you got the word with: " +str(numGuess) + " gesses left")
+                break
+            else:
+                wrongGuesses.append(guess)
+                numGuess -= 1 
+                print("Sorry incorrect! Number of guesses left: " + str(numGuess))
+                continue
         elif guess =="QUIT":
             print("Thanks for playing!")
             break
+
         if guess in word:
             correctGusses.append(guess)
             hide = displayWord(word,correctGusses)
@@ -70,7 +81,7 @@ def main():
             print("Sorry incorrect! Number of guesses left: " + str(numGuess))
             
         if hide == word and numGuess != 0:
-            print("Well done you got the word with: " +str(numGuess) + " number of gesses left")
+            print("Well done you got the word with: " +str(numGuess) + " gesses left")
             break
         elif numGuess == 0:
             print("sorry you are out of guesses the  word was: " + word )
