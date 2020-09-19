@@ -1,7 +1,8 @@
 #game config
-level: 0
 #look up decision tree stuff again
+version: .1
 player:
+  level: 0
   name: ""
   completed: 0
   notcompleted : 100
@@ -12,5 +13,5 @@ player:
   saveState:
     - lastSave: 0
     - pastSaves:
-      - first: 0
+      first: 0
     
