@@ -1,0 +1,16 @@
+#game config
+level: 0
+#look up decision tree stuff again
+player:
+  name: ""
+  completed: 0
+  notcompleted : 100
+  encounter: 1
+  currentPhase: 0.0
+  #Currentphase will get updated based on how far till this encounter is complete once 1 then encounter gets updated and completed updatedonsave
+  timeingame: "00:00:00"
+  saveState:
+    - lastSave: 0
+    - pastSaves:
+      - first: 0
+    
