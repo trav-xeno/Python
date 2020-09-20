@@ -45,7 +45,9 @@ class adv:
         if self.__level[0] == 0:
             self.__intro()
         
-
+''' 
+this class will read and save state of game 
+'''
 class GameConfig:
     __configure = "./config.yaml"
     def getSaveState(self):
